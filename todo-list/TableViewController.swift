@@ -25,9 +25,8 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todo", for: indexPath) as! TableViewCell
         let todo = model.todos[indexPath.row]
         
-        cell.textLabel?.text = todo.title
-        cell.detailTextLabel?.text = todo.completed ? "Completed" : "Not completed"
-        cell.button.setTitle("\(todo.userId)", for: .normal)
+        cell.title.text = todo.title
+        cell.completed.isOn = todo.completed
 
         return cell
     }

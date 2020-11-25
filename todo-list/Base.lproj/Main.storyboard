@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EsR-Ba-l3E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14868"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,25 +18,30 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todo" id="ueG-nu-GXu" customClass="TableViewCell" customModule="todo_list" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueG-nu-GXu" id="Gbz-z4-uaf" customClass="TableViewCell" customModule="todo_list" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueG-nu-GXu" id="Gbz-z4-uaf">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-ay-ROM">
-                                            <rect key="frame" x="352" y="7" width="46" height="30"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="onClick:" destination="ueG-nu-GXu" eventType="touchUpInside" id="0ve-XZ-1AC"/>
-                                            </connections>
-                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXY-h5-kZQ">
+                                            <rect key="frame" x="16" y="12" width="318" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEN-QG-LH2">
+                                            <rect key="frame" x="349" y="6.5" width="51" height="31"/>
+                                        </switch>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="eQN-ay-ROM" secondAttribute="trailing" constant="16" id="G15-ek-hZN"/>
-                                        <constraint firstItem="eQN-ay-ROM" firstAttribute="centerY" secondItem="Gbz-z4-uaf" secondAttribute="centerY" id="HfL-Hl-IBl"/>
+                                        <constraint firstItem="pXY-h5-kZQ" firstAttribute="centerY" secondItem="Gbz-z4-uaf" secondAttribute="centerY" id="5YS-3l-jrR"/>
+                                        <constraint firstItem="pXY-h5-kZQ" firstAttribute="leading" secondItem="Gbz-z4-uaf" secondAttribute="leading" constant="16" id="7xT-38-wab"/>
+                                        <constraint firstItem="HEN-QG-LH2" firstAttribute="centerY" secondItem="Gbz-z4-uaf" secondAttribute="centerY" id="oDd-VF-sH1"/>
+                                        <constraint firstAttribute="trailing" secondItem="HEN-QG-LH2" secondAttribute="trailing" constant="16" id="yU3-M3-sU0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="button" destination="eQN-ay-ROM" id="lYh-TT-Gzi"/>
+                                    <outlet property="completed" destination="HEN-QG-LH2" id="0bg-sx-TZh"/>
+                                    <outlet property="title" destination="pXY-h5-kZQ" id="qxv-Sv-trF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Q8-vP-9ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="117"/>
+            <point key="canvasLocation" x="-59.420289855072468" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>
